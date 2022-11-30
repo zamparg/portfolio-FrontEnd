@@ -1,0 +1,141 @@
+{
+    "name":"Gastón Zampar",
+    "img": "https://res.cloudinary.com/zamparg/image/upload/c_crop,h_900,r_0,w_900,x_0,y_150/v1669776041/Portfolio/WhatsApp_Image_2022-11-07_at_11.36.24_mtoqac.jpg",
+    "description":"Soy un desarrollador en desarrollo",
+    "about":"Tengo 32 años. Me gusta pasar tiempo con mis hijos y realizar Artes Marciales. Me encanta el Cine y la lectura. \nSoy un profesional adaptable y resolutivo. Me motiva formar parte de equipos de desarrollo donde se pueda innovar, mejorar y potenciar proyectos.",
+    "experience":[
+        {   "employer":"Instituto Superior de indumentaria",
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665764254/Portfolio/logo_35322_39706_-_copia_cgpxvi.png",
+            "role":"Responsable técnico",
+            "duration":"2014 - Actualidad",
+            "tasks":[
+                "Mantenimiento de Sistemas y Redes.",
+                "Implementación de metodologías de trabajo en red y en la nube.",
+                "Mantenimiento de páginas web",
+                "Tareas administrativas."
+        ]},
+        {
+            "employer":"Freelancer",
+            "img":"https://d30y9cdsu7xlg0.cloudfront.net/png/1266192-200.png",
+            "role":"Desarrollador Front-End",
+            "duration":"2021 - Actualidad",
+            "tasks":[
+                "Sitio Web: www.nuevaeraservicios.com.ar (HTML, BOOTSTRAP)",
+                "Juego: Tuttifrutti (HTML, CSS, JAVASCRIPT)",
+                "Carrito de Compras: EdicionesBalder (ReactJS)"
+            ]
+        },
+        {
+            "employer":"Ediciones Balder",
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1660770028/ediciones-balder/logo192_rmdeak.png",
+            "role":"Diseñador",
+            "duration":"2016 - Actualidad",
+            "tasks":[
+                "Diseño de tapas para libros (ILLUSTRATOR, PHOTOSHOP)."
+            ]
+        }
+    ],
+    "education":
+        [{
+            "time":"Act",
+            "tittle":"Programación FullStack",
+            "academy":"Ministerio de Desarrollo Productivo"
+        },
+        {
+            "time":"2022",
+            "tittle":"React JS",
+            "academy":"CoderHouse"
+        },
+        {
+            "time":"2022",
+            "tittle":"Javascript",
+            "academy":"CoderHouse"
+        },
+        {
+            "time":"2021",
+            "tittle":"Desarrollo Web",
+            "academy":"CoderHouse"
+        },
+        {
+            "time":"2021",
+            "tittle":"Gestión de Proyectos con Metodologías Ágiles",
+            "academy":"Fundación Telefónica"
+        }],
+    "skills":[
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771939/Portfolio/Habiliadades/React_k2krp3.png",
+            "tittle":"ReactJS",
+            "percent":"25%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771939/Portfolio/Habiliadades/javascript_lp35eg.png",
+            "tittle":"Javascript",
+            "percent":"40%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771939/Portfolio/Habiliadades/html_nkk4zb.png",
+            "tittle":"HTML",
+            "percent":"90%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/css_ijh4oh.png",
+            "tittle":"CSS",
+            "percent":"65%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/APs_isdtyw.png",
+            "tittle":"Adobe Photoshop",
+            "percent":"90%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/Ai_urmiy8.png",
+            "tittle":"Adobe Illustrator",
+            "percent":"90%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/APr_vpg1mp.png",
+            "tittle":"Adobre Premiere",
+            "percent":"90%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/AAe_fnqkgs.png",
+            "tittle":"Adobe After Effects",
+            "percent":"40%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771939/Portfolio/Habiliadades/office_upzbgj.png",
+            "tittle":"Microsoft Office",
+            "percent":"100%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/Drive_rda3aa.png",
+            "tittle":"Google Drive",
+            "percent":"100%"
+        },
+        {
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665771938/Portfolio/Habiliadades/Git_dxls4j.png",
+            "tittle":"GIT",
+            "percent":"40%"
+        }
+    ],
+    "projects":[
+        {
+            "tittle":"Nueva Era Servicios",
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665785776/Portfolio/iso-sinfondo_hbi07v.png",
+            "link":"http://nuevaeraservicios.com.ar/",
+            "description":"Proyeto final del Curso de Desarrollo Web"
+        },
+        {
+            "tittle":"TuttiFrutti",
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1665785867/Portfolio/9af7cc0d29cf5b58f799164fac20868c-3105939937_tzrjjh.jpg",
+            "link":"https://zamparg.github.io/tuttifruti/",
+            "description":"Proyecto final del Curso de JavaScript"
+        },
+        {
+            "tittle":"Ediciones Balder",
+            "img":"https://res.cloudinary.com/zamparg/image/upload/v1660770028/ediciones-balder/logo192_rmdeak.png",
+            "link":"https://zamparg.github.io/ediciones-balder/",
+            "description":"Proyecto Final del Curso de ReactJS"
+        }
+    ]
+}

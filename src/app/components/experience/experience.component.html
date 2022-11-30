@@ -1,0 +1,28 @@
+<section class="container-fluid " id="experience">
+    <div class="experience section m-1"> 
+    <h2>Experiencia</h2>
+    <div class="row ">
+      <div *ngFor="let experience of dataPortfolio.experience" class="col-md-6 mb-2 ">
+        <div class="card" >
+          <div class="row g-0 ">
+            <div class="col-md-3">
+              <img [src]="experience.img" class="img-fluid rounded-start skillIcon mx-auto d-block mt-2  " alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body text-center ">
+                <h5 class="card-title ">{{experience.role}}</h5>
+                <p class="card-text fst-italic mb-0">{{experience.employer}}</p>
+                <p class="card-text"><small class="text-muted">{{experience.duration}}</small></p>
+              </div>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush text-end">
+            <li *ngFor="let task of experience.tasks" class="list-group-item">{{task}}</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>

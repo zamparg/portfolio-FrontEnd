@@ -1,0 +1,18 @@
+<section class="container-fluid">
+    <div class="projects section m-1">
+      <h2>Proyectos</h2>
+      <div class="row">
+        <div *ngFor="let project of dataPortfolio.projects" class="col-md-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <img [src]="project.img" class="avatar-card mx-auto d-block" alt="...">
+              <h5 class="card-title">{{project.tittle}}</h5>
+              <p class="card-text">{{project.description}}</p>
+              <a [href]="project.link" class="btn btn-primary">Ver Proyecto</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
