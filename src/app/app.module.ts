@@ -11,7 +11,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ErrorComponent } from './components/error/error.component'
+import { ErrorComponent } from './components/error/error.component';
+import { BaseComponent } from './components/base/base.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { ErrorComponent } from './components/error/error.component'
     SkillsComponent,
     ProjectsComponent,
     NavbarComponent,
-    ErrorComponent
+    ErrorComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,

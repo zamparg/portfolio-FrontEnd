@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BaseComponent } from './components/base/base.component';
 import { ErrorComponent } from './components/error/error.component';
 
 
-const routes: Routes = [
-  {path: '', redirectTo: '/inicio', pathMatch: 'full'},
-  {path: '**', pathMatch: 'full', component: ErrorComponent}
+const appRoutes: Routes = [
+  {path: '', component:BaseComponent, pathMatch: 'full'},
+  {path: '**', component: ErrorComponent}
 ];
 
 @NgModule({
   
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

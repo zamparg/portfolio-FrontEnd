@@ -1,4 +1,4 @@
-<nav class="navbar bg-light fixed-top">
+<nav class="navbar bg-light static-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://res.cloudinary.com/zamparg/image/upload/v1660770028/ediciones-balder/logo192_rmdeak.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">Gastón Zampar
@@ -14,8 +14,15 @@
         <a class="navbar-brand" href="https://github.com/zamparg">
           <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-github-48_lzqb9g.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
         </a>
-        <button class="btn btn-outline-success">Login</button>
+        <a routerLink="profile" routerLinkActive="active" *ngIf="authService.logIn">
+          <button class="btn btn-outline-success">Perfil</button>
+        </a>
+        <a href="#" (click)="logout()" *ngIf="authService.logIn">
+          <button class="btn btn-outline-success" >Cerrar Sesion</button>
+        </a>
+        <a routerLink="profile" routerLinkActive="active" *ngIf="!authService.logIn">
+          <button class="btn btn-outline-success">Login</button>
+        </a>
       </div>
     </div>
-    
-  </nav>
+</nav>
