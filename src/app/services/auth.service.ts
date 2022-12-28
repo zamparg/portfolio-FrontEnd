@@ -10,16 +10,20 @@ export class AuthService {
   token:any; 
 
   constructor(private http:HttpClient, private router:Router) { }
+  
   login(email:string, password:string){
     this.http.post(this.api + '/authenticate', {email:email,password:password}).subscribe((resp:any)=>{
       this.router.navigate(['profile']);
-      localStorage.setItem('auth_token', resp.token)
+      localStorage.setItem('token', resp.token)
     })
   };
+
   logout(){
     localStorage.removeItem('token')
-  }
-  public get logIn():Boolean{
-    return (localStorage.getItem('token')!== null)
+  };
+
+  isLoggedIn() {
+    return(localStorage.getItem('token')!== null)
+
   }
 }

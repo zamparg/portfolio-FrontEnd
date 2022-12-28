@@ -12,7 +12,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErrorComponent } from './components/error/error.component';
-import { BaseComponent } from './components/base/base.component'
+import { BaseComponent } from './components/base/base.component';
+import { LoginComponent } from './components/login/login.component'
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { BaseComponent } from './components/base/base.component'
     ProjectsComponent,
     NavbarComponent,
     ErrorComponent,
-    BaseComponent
+    BaseComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

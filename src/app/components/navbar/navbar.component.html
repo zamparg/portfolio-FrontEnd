@@ -14,13 +14,13 @@
         <a class="navbar-brand" href="https://github.com/zamparg">
           <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-github-48_lzqb9g.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
         </a>
-        <a routerLink="profile" routerLinkActive="active" *ngIf="authService.logIn">
+        <a routerLink="profile" routerLinkActive="active" *ngIf="logIn">
           <button class="btn btn-outline-success">Perfil</button>
         </a>
-        <a href="#" (click)="logout()" *ngIf="authService.logIn">
-          <button class="btn btn-outline-success" >Cerrar Sesion</button>
+        <a routerLink="" (click)="logout()" *ngIf="logIn">
+          <button class="btn btn-outline-success">Cerrar Sesion</button>
         </a>
-        <a routerLink="profile" routerLinkActive="active" *ngIf="!authService.logIn">
+        <a routerLink="login" routerLinkActive="active" *ngIf="!logIn">
           <button class="btn btn-outline-success">Login</button>
         </a>
       </div>
