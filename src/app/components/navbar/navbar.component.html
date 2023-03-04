@@ -1,28 +1,31 @@
-<nav class="navbar bg-light static-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://res.cloudinary.com/zamparg/image/upload/v1660770028/ediciones-balder/logo192_rmdeak.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">Gastón Zampar
-      </a>
-      <div>
-        <a class="navbar-brand" href="#">
-          <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-whatsapp-48_ge7b0p.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="http://linkedin.com/in/zamparg
-        ">
-          <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-linkedin-48_hjqrut.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="https://github.com/zamparg">
-          <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-github-48_lzqb9g.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-        </a>
-        <a routerLink="profile" routerLinkActive="active" *ngIf="logIn">
-          <button class="btn btn-outline-success">Perfil</button>
-        </a>
-        <a routerLink="" (click)="logout()" *ngIf="logIn">
-          <button class="btn btn-outline-success">Cerrar Sesion</button>
-        </a>
-        <a routerLink="login" routerLinkActive="active" *ngIf="!logIn">
-          <button class="btn btn-outline-success">Login</button>
-        </a>
-      </div>
-    </div>
+<nav class="container-fluid argProgContainer navbar static-top d-flex ">
+  <div class="d-flex flex-wrap justify-content-start py-1 mx-3">
+    <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" class="d-flex align-items-start mb-md-0 me-md-auto text-decoration-none" target="_blank">
+      <img src="../../../assets/img/APLogo-20-20.png" alt="" class="argProgLogo">
+      <span class="fs-6 argProgHash">#yoprogramo</span>
+    </a>
+  </div>
+  <div class="py-1 mx-3 d-flex align-items-center">
+    <a class="navbar-brand" href="#">
+      <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-whatsapp-48_ge7b0p.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+    </a>
+    <a class="navbar-brand" href="http://linkedin.com/in/zamparg">
+      <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-linkedin-48_hjqrut.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+    </a>
+    <a class="navbar-brand" href="https://github.com/zamparg">
+      <img src="https://res.cloudinary.com/zamparg/image/upload/v1665499379/Portfolio/icons8-github-48_lzqb9g.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+    </a>
+    <a routerLink="profile" routerLinkActive="active" *ngIf="logIn">
+      <button class="btn btn-outline-light btn-login">Perfil</button>
+    </a>
+    <a routerLink="" (click)="logout()" *ngIf="logIn">
+      <button class="btn btn-outline-light btn-login">Cerrar Sesion</button>
+    </a>
+    <a routerLink="login" routerLinkActive="active" *ngIf="!logIn">
+      <button class="btn btn-outline-light btn-login">Login</button>
+    </a>
+  </div>
 </nav>
+
+
+        

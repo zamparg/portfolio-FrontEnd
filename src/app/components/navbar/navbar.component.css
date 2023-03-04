@@ -1,0 +1,21 @@
+.argProgContainer{
+    background-color: rgb(14, 14, 53);
+    color:white
+}
+.argProgLogo{
+    width: 75px !important;
+    height: auto;
+  }
+
+  .argProgHash{
+    color: white;
+  }
+  .btn-login{
+    padding: 0.2rem 0.5rem !important;
+  }
+
+  @media (max-width: 440px) {
+    .argProgContainer{
+        justify-content: center;
+    }
+  }

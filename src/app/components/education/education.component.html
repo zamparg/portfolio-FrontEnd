@@ -2,7 +2,7 @@
     <div class="courses section m-1">
       <h2>Cursos y Certificaciones</h2>
       <div class="container-fluid row justify-content-between">
-        <div *ngFor="let course of dataPortfolio.education" class="col-md-5 col-12 row rounded border p-1 m-1">
+        <div *ngFor="let course of dataPortfolio.education" class="col-md-5 col-12 row rounded border p-1 m-1 card-courses">
           <div class="col-md-2 col-2 fst-italic">{{course.time}}</div>
           <div class="col-md-5  fw-bold text-center">{{course.tittle}}</div>
           <div class="col-md-5  text-center">{{course.academy}}</div>
