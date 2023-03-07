@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwitchLoginService } from 'src/app/services/switch-login.service';
 
 @Component({
   selector: 'app-base',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BaseComponent implements OnInit {
 
-  constructor() { }
+  constructor(public switchLoginService:SwitchLoginService) { }
 
   ngOnInit(): void {
   }

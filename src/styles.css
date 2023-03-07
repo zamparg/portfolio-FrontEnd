@@ -44,3 +44,6 @@ body{
 .card{
   background-color: rgba(255, 255, 255, 0.61);
 }
+.list-group-item:hover, .skills .card:hover{
+  background-color: rgba(255, 255, 255, 0.9);;
+}
