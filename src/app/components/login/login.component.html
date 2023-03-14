@@ -1,13 +1,13 @@
 
 <div class="modalLogin"  >
-  <div class="card-body text-left ">
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="d-flex flex-wrap">
-        <div>
+
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="d-flex align-items-center justify-content-center flex-wrap">
+        <div class="text-center">
             <label for="user" class="m-1">Usuario:</label>
             <input type="user" formControlName="user">
             <br>
         </div>
-        <div>
+        <div class="text-center">
             <label for="password" class="m-1">Password:</label>
             <input type="password" formControlName="password" [class.border-danger]="MailValid">
             <div *ngIf="Password?.errors  && Password?.touched">
@@ -37,5 +37,5 @@
       -->
       </form>
     </div>
-      </div>
+
       

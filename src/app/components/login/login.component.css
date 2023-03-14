@@ -2,8 +2,14 @@ input {
     border-radius: 9px;
     width: 10rem;
 }
-
+@keyframes example {
+    from {opacity: 0}
+    to {opacity: 100; }
+  }
+  
 .modalLogin{
+    animation-name: example;
+    animation-duration: 1s;
     width: 15rem; 
     height: auto; 
     position: absolute;
@@ -11,5 +17,7 @@ input {
     background-color: black;
     z-index: 100;
     display: flex;
-    padding: 2rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
 }
