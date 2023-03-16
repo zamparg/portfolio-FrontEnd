@@ -1,27 +1,20 @@
 
 <div class="modalLogin"  >
 
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="d-flex align-items-center justify-content-center flex-wrap">
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate class="d-flex align-items-center justify-content-center flex-wrap">
         <div class="text-center">
             <label for="user" class="m-1">Usuario:</label>
-            <input type="user" formControlName="user">
+            <input type="text"  id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
             <br>
         </div>
         <div class="text-center">
             <label for="password" class="m-1">Password:</label>
-            <input type="password" formControlName="password" [class.border-danger]="MailValid">
-            <div *ngIf="Password?.errors  && Password?.touched">
-                <p *ngIf="Password?.hasError('required')" class="error">
-                    El password es requerido.
-                </p>
-                <p *ngIf="Password?.hasError('minlength') " class="error">
-                    El password debe ser de 8 o más caracteres.
-                </p>
-            </div>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
             <br>
         </div>
+        <!--<p class="small">¿Olvidaste la contraseña?</p>  -->
         <button class="btn-dark btn m-2"type="submit"> Login</button>
-
+        
         <!--
         <label for="email">Email:</label>
         <input type="email" formControlName="email">
@@ -36,6 +29,8 @@
         <br>            
       -->
       </form>
-    </div>
+      <p class="small m-0">No tengo cuenta</p>
+
+</div>
 
       

@@ -1,0 +1,21 @@
+<section class="container-fluid" *ngIf="expLab">
+    <div class="experience section m-1"> 
+      <div class="row ">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="role">Rol:</label>
+                <input type="text" id="role" name="role" [(ngModel)]="expLab.role" required>
+                <label for="employer">Empresa:</label>
+                <input type="text" id="employer" name="employer" [(ngModel)]="expLab.employer" required>
+                <label for="img">Logo:</label>
+                <input type="text" id="img" name="img" [(ngModel)]="expLab.img" required>
+                <label for="duration">Duración:</label>
+                <input type="text" id="duration" name="duration" [(ngModel)]="expLab.duration" required>
+                <label for="task">Tareas:</label>
+                <input type="text" id="task" name="task" [(ngModel)]="expLab.task" required>
+            </div>
+            <button class="btn btn-dark"> Actualizar </button>
+        </form>
+      </div>  
+    </div>
+  </section>

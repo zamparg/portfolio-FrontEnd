@@ -17,6 +17,7 @@ input {
     background-color: black;
     z-index: 100;
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
     border-radius: 0 0 0 12px;

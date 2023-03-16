@@ -17,6 +17,9 @@ import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { interceptorProvider } from './services/interceptor-service';
+import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/experience/editar-experiencia/editar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { FooterComponent } from './components/footer/footer.component';
     BaseComponent,
     LoginComponent,
     ProfileComponent,
-    FooterComponent
+    FooterComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

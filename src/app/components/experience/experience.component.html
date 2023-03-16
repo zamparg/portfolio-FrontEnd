@@ -1,28 +1,39 @@
 <section class="container-fluid " id="experience">
-    <div class="experience section m-1"> 
-    <h2>Experiencia</h2>
+  <div class="experience section m-1"> 
+    <div class="d-flex justify-content-between">
+      <h2>Experiencia</h2>
+      <button class="btn btn-dark" routerLink="/nueva_experiencia" *ngIf="isLogged">Agregar Experiencia</button>
+    </div>
+      
     <div class="row ">
-      <div *ngFor="let experience of dataPortfolio.experience" class="col-md-6 mb-2 ">
+      <div *ngFor="let expLab of experiencia" class="col-md-6 mb-2 ">
         <div class="card" >
           <div class="row g-0 card-header">
             <div class="col-md-3">
-              <img [src]="experience.img" class="img-fluid rounded-start skillIcon mx-auto d-block mt-2  " alt="...">
+              <img [src]="expLab.img" class="img-fluid rounded-start skillIcon mx-auto d-block mt-2  " alt="...">
             </div>
             <div class="col-md-9">
               <div class="card-body text-center ">
-                <h5 class="card-title ">{{experience.role}}</h5>
-                <p class="card-text fst-italic mb-0">{{experience.employer}}</p>
-                <p class="card-text"><small class="text-muted">{{experience.duration}}</small></p>
+
+                <h5 class="card-title ">{{expLab.role}}</h5>
+                <p class="card-text fst-italic mb-0">{{expLab.employer}}</p>
+                <p class="card-text"><small class="text-muted">{{expLab.duration}}</small></p>
+                <div *ngIf="isLogged" class="m-0">
+                  <button class="btn btn-light p-1 my-0 mx-1" routerLink="/editar_experiencia/{{expLab.id}}">
+                    <i  class="bi bi-pencil-square mx-1 my-0">Editar</i>
+                  </button>
+                  <button class="btn btn-danger p-1 my-0 mx-1" (click)="delete(expLab.id)">
+                    <i class="bi bi-trash3 mx-1 my-0">Eliminar</i>  
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <ul class="list-group list-group-flush text-end">
-            <li *ngFor="let task of experience.tasks" class="list-group-item">{{task}}</li>
+            <li  class="list-group-item"><p class="text-center">{{expLab.task}}</p></li>
           </ul>
           </div>
-        </div>
       </div>
-      
-    </div>
-
-  </section>
+    </div>  
+  </div>
+</section>

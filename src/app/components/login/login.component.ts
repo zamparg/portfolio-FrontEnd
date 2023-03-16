@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
-
+import { Router } from '@angular/router';
+import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/services/auth.service';
+import { SwitchLoginService } from 'src/app/services/switch-login.service';
+import { TokenService } from 'src/app/services/token.service';
 
 
 @Component({
@@ -11,59 +12,56 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
+
   public show = false
+  
   showLogin(){
     this.show =true
   }
   hideLogin(){
     this.show =false
   }
+
+  isLogged=false
+  isLoginFail=false
+  loginUsuario!: LoginUsuario
+  nombreUsuario: string =''
+  password: string =''
+  roles: string[] = []
+  errMsj!: string
+
+  constructor(private authService: AuthService, private tokenService:TokenService, private router:Router, public switchLoginService:SwitchLoginService) {}
   
 
-  constructor(private authService: AuthService, private formBuilder:FormBuilder) {
-    this.form=this.formBuilder.group({
-      username:['',[Validators.required, Validators.minLength(5),Validators.maxLength(12)]],
-      email:['',[Validators.required, Validators.email]],
-      password:['',[Validators.required, Validators.minLength(8)]]
-    })
-   } 
-
-
-
-  ngOnInit(): void { }
-  
-  get Password(){
-    return this.form.get("password");
-  }
- 
-  get Mail(){
-   return this.form.get("email");
-  }
-  get User(){
-    return this.form.get("user");
-   }
-  get PasswordValid(){
-    return this.Password?.touched && !this.Password?.valid;
-  }
-
-  get MailValid() {
-    return false
-  }
- 
-
-  onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault; 
- 
-    if (this.form.valid){
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!")
-    }else{
-      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-      this.form.markAllAsTouched(); 
+  ngOnInit(): void { 
+    if(this.tokenService.getToken()){
+      this.isLogged=true
+      this.isLoginFail=false
+      this.roles = this.tokenService.getAuthorities();
     }
- 
   }
+  
+  onLogin():void{
+    this.loginUsuario=new LoginUsuario(this.nombreUsuario, this.password); 
+    console.log(this.loginUsuario)
+    
+    this.authService.login(this.loginUsuario).subscribe(
+      data=>{
+        this.isLogged=true
+        this.isLoginFail=false
+        this.tokenService.setToken(data.token)
+        this.tokenService.setUserName(data.nombreUsuario)
+        this.tokenService.setAuthorities(data.authorities)
+        this.roles= data.authorities
+        this.switchLoginService.swithLogin()
+        window.location.reload()
+      }, err=>{
+        this.isLogged=false
+        this.isLoginFail=true
+        this.errMsj=err.error.mensaje
+        console.log(this.errMsj)
+      }
+    )
+  }
+ 
 }

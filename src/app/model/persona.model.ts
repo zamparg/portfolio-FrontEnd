@@ -1,11 +1,11 @@
 export class Persona {
     id?:number;
-    name:String;
-    description:String;
-    about:String;
-    img:String
+    name:string;
+    description:string;
+    about:string;
+    img:string
 
-    constructor(name:String, description:String, about:String, img:String){
+    constructor(name:string, description:string, about:string, img:string){
         this.name = name;
         this.description = description;
         this.about = about;
