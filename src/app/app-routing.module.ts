@@ -8,6 +8,8 @@ import { EditarExperienciaComponent } from './components/experience/editar-exper
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia/nueva-experiencia.component';
 // import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditarSkilsComponent } from './components/skills/editar-skills/editar-skils/editar-skils.component';
+import { NuevoSkilsComponent } from './components/skills/nuevo-skills/nuevo-skils/nuevo-skils.component';
 import { AuthGuard } from './services/auth.guard';
 
 
@@ -19,6 +21,9 @@ const appRoutes: Routes = [
   {path: 'editar_experiencia/:id', component:EditarExperienciaComponent},
   {path: 'nueva_educacion', component:NuevaEducacionComponent},
   {path: 'editar_educacion/:id', component:EditarEducacionComponent},
+  {path: 'nuevo_skills', component:NuevoSkilsComponent},
+  {path: 'editar_skills/:id', component:EditarSkilsComponent},
+
   {path: '**', component: ErrorComponent}
 ];
 

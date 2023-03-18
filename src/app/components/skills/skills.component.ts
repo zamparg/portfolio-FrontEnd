@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { Skills } from 'src/app/model/skills';
+import { SkillsService } from 'src/app/services/skills.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,14 +10,39 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class SkillsComponent implements OnInit {
 
-  dataPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  skills:Skills[] = [];
+
+  constructor(private skillsService: SkillsService, private tokenService:TokenService) { }
+
+  isLogged = false  
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.dataPortfolio=data
-    });
+    this.cargarSkills()
     
-  }
+    if(this.tokenService.getToken()){
+      this.isLogged=true
+    }else{
+      this.isLogged=false
+    }
+    }
+    
+    cargarSkills():void{
+      this.skillsService.lista().subscribe(data=>{this.skills=data})
+    }
 
+    delete(id?:number){
+      if(confirm('Realmente desea eliminar este Skill?')){
+        if(id!=undefined){
+          this.skillsService.delete(id).subscribe(
+            data=>{
+              this.cargarSkills()
+            }, err =>{
+              alert('No se qué Skill borrar')
+            }
+          )
+        }
+      }
+      }
+      
 }
+

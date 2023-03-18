@@ -1,0 +1,17 @@
+<section class="container-fluid ">
+    <div class="experience section m-1"> 
+      <div class="row ">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="img">Imágen (url):</label>
+                <input type="text" id="img" name="img" [(ngModel)]="img" required>
+                <label for="tittle">Skill:</label>
+                <input type="text" id="tittle" name="tittle" [(ngModel)]="tittle" required>
+                <label for="percent">Porcentual:</label>
+                <input type="number" min="0" max="100" id="percent" name="percent" [(ngModel)]="percent" required>
+            </div>
+            <button class="btn btn-dark"> Agregar Skills </button>
+        </form>
+      </div>  
+    </div>
+  </section>

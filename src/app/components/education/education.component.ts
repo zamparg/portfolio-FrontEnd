@@ -14,7 +14,7 @@ export class EducationComponent implements OnInit {
 
   constructor(private educacionService: EducacionService, private tokenService:TokenService) { }
 
-  isLogged = false
+  isLogged = false  
 
   ngOnInit(): void {
     this.cargarEducacion()
