@@ -20,6 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { interceptorProvider } from './services/interceptor-service';
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia/nueva-experiencia.component';
 import { EditarExperienciaComponent } from './components/experience/editar-experiencia/editar-experiencia.component';
+import { NuevaEducacionComponent } from './components/education/nueva-educacion/nueva-educacion/nueva-educacion.component';
+import { EditarEducacionComponent } from './components/education/editar-educacion/editar-educacion/editar-educacion.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { EditarExperienciaComponent } from './components/experience/editar-exper
     ProfileComponent,
     FooterComponent,
     NuevaExperienciaComponent,
-    EditarExperienciaComponent
+    EditarExperienciaComponent,
+    NuevaEducacionComponent,
+    EditarEducacionComponent
   ],
   imports: [
     BrowserModule,

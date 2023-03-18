@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { BaseComponent } from './components/base/base.component';
+import { EditarEducacionComponent } from './components/education/editar-educacion/editar-educacion/editar-educacion.component';
+import { NuevaEducacionComponent } from './components/education/nueva-educacion/nueva-educacion/nueva-educacion.component';
 import { ErrorComponent } from './components/error/error.component';
 import { EditarExperienciaComponent } from './components/experience/editar-experiencia/editar-experiencia.component';
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia/nueva-experiencia.component';
@@ -15,6 +17,8 @@ const appRoutes: Routes = [
   {path: 'profile', component:ProfileComponent, canActivate:[AuthGuard]},
   {path: 'nueva_experiencia', component:NuevaExperienciaComponent},
   {path: 'editar_experiencia/:id', component:EditarExperienciaComponent},
+  {path: 'nueva_educacion', component:NuevaEducacionComponent},
+  {path: 'editar_educacion/:id', component:EditarEducacionComponent},
   {path: '**', component: ErrorComponent}
 ];
 

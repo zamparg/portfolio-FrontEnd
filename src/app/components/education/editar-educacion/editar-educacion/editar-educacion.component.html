@@ -1,0 +1,18 @@
+<section class="container-fluid" *ngIf="educ">
+    <div class="experience section m-1"> 
+      <div class="row ">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="role">Nombre del Curso:</label>
+                <input type="text" id="role" name="role" [(ngModel)]="educ.tittle" required>
+                <label for="employer">Año de realización:</label>
+                <input type="text" id="employer" name="employer" [(ngModel)]="educ.time" required>
+                <label for="img">Academia :</label>
+                <input type="text" id="img" name="img" [(ngModel)]="educ.academy" required>
+
+            </div>
+            <button class="btn btn-dark"> Actualizar </button>
+        </form>
+      </div>  
+    </div>
+  </section>
