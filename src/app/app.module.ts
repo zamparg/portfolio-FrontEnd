@@ -26,6 +26,7 @@ import { EditarSkilsComponent } from './components/skills/editar-skills/editar-s
 import { NuevoSkilsComponent } from './components/skills/nuevo-skills/nuevo-skils/nuevo-skils.component';
 import { NuevoProyectoComponent } from './components/projects/nuevo-proyecto/nuevo-proyecto/nuevo-proyecto.component';
 import { EditarProyectoComponent } from './components/projects/editar-proyecto/editar-proyecto/editar-proyecto.component';
+import { EditarPerfilComponent } from './components/header/editar-perfil/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { EditarProyectoComponent } from './components/projects/editar-proyecto/e
     EditarSkilsComponent,
     NuevoSkilsComponent,
     NuevoProyectoComponent,
-    EditarProyectoComponent
+    EditarProyectoComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,

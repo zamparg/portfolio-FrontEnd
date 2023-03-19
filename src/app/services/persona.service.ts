@@ -14,6 +14,11 @@ export class PersonaService {
       return this.http.get<Persona>(this.URL+"traer/perfil")
     }
 
+    //Edita el perfil
+    public update(persona:Persona): Observable<any>{
+      return this.http.put<any>(this.URL + `editar/2`, persona);
+    }
+
 
  
 }

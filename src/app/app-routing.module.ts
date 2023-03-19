@@ -6,6 +6,7 @@ import { NuevaEducacionComponent } from './components/education/nueva-educacion/
 import { ErrorComponent } from './components/error/error.component';
 import { EditarExperienciaComponent } from './components/experience/editar-experiencia/editar-experiencia.component';
 import { NuevaExperienciaComponent } from './components/experience/nueva-experiencia/nueva-experiencia.component';
+import { EditarPerfilComponent } from './components/header/editar-perfil/editar-perfil/editar-perfil.component';
 // import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditarProyectoComponent } from './components/projects/editar-proyecto/editar-proyecto/editar-proyecto.component';
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
   {path: 'editar_skills/:id', component:EditarSkilsComponent},
   {path: 'nuevo_proyecto', component:NuevoProyectoComponent},
   {path: 'editar_proyecto/:id', component:EditarProyectoComponent},
-
+  {path: 'editar_perfil', component:EditarPerfilComponent},
   {path: '**', component: ErrorComponent}
 ];
 
