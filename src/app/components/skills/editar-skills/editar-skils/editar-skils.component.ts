@@ -10,7 +10,7 @@ import { SkillsService } from 'src/app/services/skills.service';
 })
 export class EditarSkilsComponent implements OnInit {
 
-  skills:Skills =null; 
+  skills:Skills; 
 
   constructor(private skillsService:SkillsService, private activatedRoute:ActivatedRoute, private router:Router) { }
   
@@ -20,7 +20,7 @@ export class EditarSkilsComponent implements OnInit {
         data=>{
           this.skills=data
         },err =>{
-          alert('Error al modificar Exp')
+          alert('Error al traer el Skill')
           this.router.navigate([''])
         }
 
@@ -29,15 +29,15 @@ export class EditarSkilsComponent implements OnInit {
   
     onUpdate():void{
       const id=this.activatedRoute.snapshot.params['id']
+      console.log(this.skills)
       this.skillsService.update(id, this.skills).subscribe(
         data=>{
+          
           this.router.navigate([''])
         },err =>{
-          alert('Error al modificar Exp')
-          this.router.navigate([''])
+          alert('Error al modificar Skill')
+         //this.router.navigate([''])
         }
       )
-
-  
   }
 }

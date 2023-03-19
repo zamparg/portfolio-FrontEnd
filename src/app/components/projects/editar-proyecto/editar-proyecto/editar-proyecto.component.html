@@ -1,0 +1,19 @@
+<section class="container-fluid" *ngIf="proyectos">
+    <div class="experience section m-1"> 
+      <div class="row ">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="tittle">Título del proyecto</label>
+                <input type="text" id="tittle" name="tittle" [(ngModel)]="proyectos.tittle" required>
+                <label for="img">Imágen (url):</label>
+                <input type="text" id="img" name="img" [(ngModel)]="proyectos.img" required>
+                <label for="link">Link (url):</label>
+                <input type="text" id="link" name="link" [(ngModel)]="proyectos.link" required>
+                <label for="description">Descripción:</label>
+              <textarea id="description" name="description" [(ngModel)]="proyectos.description" required> </textarea>
+            </div>
+            <button class="btn btn-dark"> Actualizar </button>
+        </form>
+      </div>  
+    </div>
+  </section>

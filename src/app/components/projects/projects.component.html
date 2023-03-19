@@ -1,14 +1,26 @@
 <section class="container-fluid">
     <div class="projects section m-1">
-      <h2>Proyectos</h2>
+      <div class="d-flex justify-content-between">
+        <h2>Proyectos</h2>
+        <button class="btn btn-dark" routerLink="/nueva_experiencia" *ngIf="isLogged">Agregar Experiencia</button>
+      </div>
+        
       <div class="row">
-        <div *ngFor="let project of dataPortfolio.projects" class="col-md-4">
+        <div *ngFor="let proyecto of proyectos" class="col-md-4">
           <div class="card">
             <div class="card-body text-center">
-              <img [src]="project.img" class="avatar-card mx-auto d-block" alt="...">
-              <h5 class="card-title">{{project.tittle}}</h5>
-              <p class="card-text">{{project.description}}</p>
-              <a [href]="project.link" class="btn btn-primary">Ver Proyecto</a>
+              <img [src]="proyecto.img" class="avatar-card mx-auto d-block" alt="...">
+              <h5 class="card-title">{{proyecto.tittle}}</h5>
+              <p class="card-text">{{proyecto.description}}</p>
+              <a [href]="proyecto.link" class="btn btn-primary">Ver Proyecto</a>
+            </div>
+            <div *ngIf="isLogged" class="m-0">
+              <button class="btn btn-light px-2 " routerLink="/editar_proyecto/{{proyecto.id}}">
+                <i  class="bi bi-pencil-square "></i>
+              </button>
+              <button class="btn btn-danger px-2 " (click)="delete(proyecto.id)">
+                <i class="bi bi-trash3 "></i>  
+              </button>
             </div>
           </div>
         </div>

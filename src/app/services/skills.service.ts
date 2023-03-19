@@ -8,7 +8,7 @@ import { Skills } from '../model/skills';
 })
 export class SkillsService {
   
-  expURL='http://localhost:8080/skills/'
+  expURL='https://portfolio-backend-production-c3d9.up.railway.app/skills/'
 
   constructor(private httpClient:HttpClient) { }
 
@@ -18,11 +18,11 @@ export class SkillsService {
   public detail(id:number): Observable<Skills>{
     return this.httpClient.get<Skills>(this.expURL + `traer/${id}`);
   }
-  public save(educacion:Skills): Observable<any>{
-    return this.httpClient.post<any>(this.expURL + 'crear', educacion);
+  public save(skills:Skills): Observable<any>{
+    return this.httpClient.post<any>(this.expURL + 'crear', skills);
   }
-  public update(id:number, educacion:Skills): Observable<any>{
-    return this.httpClient.put<any>(this.expURL + `editar/${id}`, educacion);
+  public update(id:number, skills:Skills): Observable<any>{
+    return this.httpClient.put<any>(this.expURL + `editar/${id}`, skills);
   }
   public delete(id:number): Observable<any>{
     return this.httpClient.delete<any>(this.expURL + `borrar/${id}`);

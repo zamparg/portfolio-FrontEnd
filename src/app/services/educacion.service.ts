@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  expURL='http://localhost:8080/educacion/'
+  expURL='https://portfolio-backend-production-c3d9.up.railway.app/educacion/'
 
   constructor(private httpClient:HttpClient) { }
 

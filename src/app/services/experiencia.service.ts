@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaService {
 
-  expURL='http://localhost:8080/experiencia/'
+  expURL='https://portfolio-backend-production-c3d9.up.railway.app/experiencia/'
 
   constructor(private httpClient:HttpClient) { }
 

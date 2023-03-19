@@ -32,6 +32,7 @@ export class ExperienceComponent implements OnInit {
     }
 
     delete(id?:number){
+      if(confirm('Realmente desea eliminar esta Experiencia?')){
       if(id!=undefined){
         this.experienciaService.delete(id).subscribe(
           data=>{
@@ -42,5 +43,5 @@ export class ExperienceComponent implements OnInit {
         )
       }
     }
-
+    }
 }
