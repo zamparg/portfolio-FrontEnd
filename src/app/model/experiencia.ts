@@ -5,15 +5,15 @@ export class Experiencia {
     img : string
     role : string
     duration : string
-    task : string 
+    tasks : string 
 
-    constructor(employer:string, img:string, role:string, duration:string, task:string ){
+    constructor(employer:string, img:string, role:string, duration:string, tasks:string ){
 
         this.employer = employer
         this.img = img
         this.role = role
         this.duration = duration
-        this.task = task 
+        this.tasks = tasks
     
     }
 }
