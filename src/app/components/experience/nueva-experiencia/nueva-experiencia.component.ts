@@ -14,7 +14,7 @@ export class NuevaExperienciaComponent implements OnInit {
   img : string = ''
   role : string = ''
   duration : string = ''
-  task : string = ''
+  tasks : string = ''
 
   constructor(private experienciaService:ExperienciaService, private router:Router) { }
 
@@ -22,7 +22,7 @@ export class NuevaExperienciaComponent implements OnInit {
   }
 
   onCreate():void{
-    const exp = new Experiencia(this.employer, this.img, this.role, this.duration, this.task)
+    const exp = new Experiencia(this.employer, this.img, this.role, this.duration, this.tasks)
     this.experienciaService.save(exp).subscribe(data=>{
       alert('Experiencia agregada con éxito');
       this.router.navigate([''])
