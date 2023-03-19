@@ -1,0 +1,19 @@
+<section class="container-fluid" *ngIf="persona">
+    <div class="experience section m-1"> 
+      <div class="row ">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="formGroup">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" [(ngModel)]="persona.name" required>
+                <label for="description">Descripción breve:</label>
+                <textarea id="description" name="description" [(ngModel)]="persona.description" required></textarea>
+                <label for="about">Acerca de:</label>
+                <input type="number" min="0" max="100" id="about" name="about" [(ngModel)]="persona.about" required>
+                <label for="img">Imagen (url):</label>
+                <input type="text" id="img" name="img" [(ngModel)]="persona.img" required>
+            </div>
+            <button class="btn btn-dark"> Actualizar </button>
+        </form>
+      </div>  
+    </div>
+  </section>

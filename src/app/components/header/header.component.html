@@ -5,6 +5,7 @@
         <h1>{{persona.name}}</h1>
         <p>{{persona.description}}</p>
         <button class="btn btn-dark">Contacto</button>
+        <button class="btn btn-dark" routerLink="/editar_perfil" *ngIf="isLogged">Agregar Skill</button>
       </div>
     </div>
   </header>
