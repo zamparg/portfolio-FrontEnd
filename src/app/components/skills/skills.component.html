@@ -2,7 +2,7 @@
     <div class="skillsSection section m-1">
       <div class="d-flex">
         <h2>Skills</h2>
-        <button class="btn btn-dark mx-2" routerLink="/nuevo_skills" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn btn-dark m-2" routerLink="/nuevo_skills" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
       </div>
       
       <div class="row">
@@ -17,10 +17,10 @@
                   <div class="text-center d-flex gap-3 justify-content-center">
                   <h5 class="card-title">{{skill.tittle}}</h5>
                   <div *ngIf="isLogged" class="m-0 mb-1">
-                    <button class="btn btn-light px-1 mx-1" routerLink="/editar_skills/{{skill.id}}">
+                    <button class="btn btn-light px-1 mx-1 iconEdit" routerLink="/editar_skills/{{skill.id}}">
                       <i  class="bi bi-pencil-square "></i>
                     </button>
-                    <button class="btn btn-danger px-1 mx-1" (click)="delete(skill.id)">
+                    <button class="btn btn-danger px-1 mx-1 iconEdit" (click)="delete(skill.id)">
                       <i class="bi bi-trash3 "></i>  
                     </button>
                   </div>

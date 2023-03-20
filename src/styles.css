@@ -62,3 +62,7 @@ h2{
 .bi-plus-circle{
   color: white;
 }
+
+.iconEdit{
+  --bs-btn-padding-y: 0;
+}
