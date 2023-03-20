@@ -14,7 +14,7 @@ export class EditarSkilsComponent implements OnInit {
 
   constructor(private skillsService:SkillsService, private activatedRoute:ActivatedRoute, private router:Router) { }
   
-    ngOnInit(): void {
+ ngOnInit(): void {
       const id=this.activatedRoute.snapshot.params['id']
       this.skillsService.detail(id).subscribe(
         data=>{

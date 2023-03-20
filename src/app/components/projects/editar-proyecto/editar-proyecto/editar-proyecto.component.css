@@ -1,0 +1,41 @@
+form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: whitesmoke;
+}
+
+input,textarea{
+    border-radius: 12px;
+    padding: 0.25rem;
+}
+
+button{
+    margin: 1rem;
+}
+
+
+
+@media (max-width:900px) {
+    form div{
+        width:75%;
+    }
+    
+}
+
+@media (max-width:500px) {
+    form div{
+        width: 100%;
+    }
+    
+}

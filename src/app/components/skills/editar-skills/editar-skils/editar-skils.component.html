@@ -1,17 +1,18 @@
-<section class="container-fluid" *ngIf="skills">
-    <div class="experience section m-1"> 
-      <div class="row ">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-            <div class="formGroup">
+<section class="" *ngIf="skills"> 
+<h1 class="text-center mt-2 text-white">Editar Skill</h1>
+      <div class="">
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
+
+            <div class="formGroup" class="">
+              <label for="tittle">Título:</label>
+              <input type="text" id="tittle" name="tittle" [(ngModel)]="skills.tittle" required>
                 <label for="img">Imagen (url):</label>
                 <input type="text" id="img" name="img" [(ngModel)]="skills.img" required>
-                <label for="tittle">título:</label>
-                <input type="text" id="tittle" name="tittle" [(ngModel)]="skills.tittle" required>
                 <label for="percent">Porcentual:</label>
-                <input type="number" min="0" max="100" id="percent" name="percent" [(ngModel)]="skills.percent" required>
+                <input type="number" min="0" max="100" id="percent" name="percent" [(ngModel)]="skills.percent" required placeholder="%">
             </div>
             <button class="btn btn-dark"> Actualizar </button>
         </form>
-      </div>  
-    </div>
-  </section>
+      </div>
+
+</section>
