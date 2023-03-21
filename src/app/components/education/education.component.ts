@@ -14,11 +14,11 @@ export class EducationComponent implements OnInit {
 
   constructor(private educacionService: EducacionService, private tokenService:TokenService) { }
 
-  isLogged = false  
+  isLogged = false
 
   ngOnInit(): void {
     this.cargarEducacion()
-    
+    console.log(this.tokenService.getAuthorities())
     if(this.tokenService.getToken()){
       this.isLogged=true
     }else{

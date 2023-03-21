@@ -4,8 +4,8 @@
         <img [src]="persona.img" class="img-fluid avatar" alt="">
         <h1>{{persona.name}}</h1>
         <p>{{persona.description}}</p>
-        <button class="btn btn-dark">Contacto</button>
-        <button class="btn btn-dark" routerLink="/editar_perfil" *ngIf="isLogged">Editar Perfil</button>
+        <!--<button class="btn btn-dark border border-white mx-2">Contacto</button>-->
+        <button class="btn btn-dark border border-white mx-2" routerLink="/editar_perfil" *ngIf="isLogged">Editar Perfil</button>
       </div>
     </div>
   </header>

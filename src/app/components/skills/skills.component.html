@@ -1,8 +1,8 @@
 <section class="container-fluid">
     <div class="skillsSection section m-1">
-      <div class="d-flex">
+      <div class="d-flex align-items-center">
         <h2>Skills</h2>
-        <button class="btn btn-dark m-2" routerLink="/nuevo_skills" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn btn-dark m-2 border border-white" routerLink="/nuevo_skills" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
       </div>
       
       <div class="row">
@@ -14,7 +14,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <div class="text-center d-flex gap-3 justify-content-center">
+                  <div class="text-center d-flex gap-2 justify-content-center">
                   <h5 class="card-title">{{skill.tittle}}</h5>
                   <div *ngIf="isLogged" class="m-0 mb-1">
                     <button class="btn btn-light px-1 mx-1 iconEdit" routerLink="/editar_skills/{{skill.id}}">

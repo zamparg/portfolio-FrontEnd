@@ -1,28 +1,28 @@
 <section class="container-fluid " id="courses">
     <div class="courses section m-1">
-      <div class="d-flex ">
+      <div class="d-flex align-items-center">
         <h2>Cursos y Certificaciones</h2>
-        <button class="btn btn-dark m-2" routerLink="/nueva_educacion" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn btn-dark m-2 border border-white" routerLink="/nueva_educacion" *ngIf="isLogged"><i class="bi bi-plus-circle"></i></button>
       </div>
      
 
       <div class="container-fluid row justify-content-between">
         <div *ngFor="let curso of educacion" class="col-md-5 col-12 row rounded border p-1 m-1 card-courses">
           <div class="col-md-2 col-2 fst-italic text-center">{{curso.time}}</div>
-          <div class="col-md-5 text-center d-flex gap-3 justify-content-center">
+          <div class="col-md-5 text-center d-flex gap-2 justify-content-center">
             
             <div class="  fw-bold text-center">{{curso.tittle}}</div>
             <div *ngIf="isLogged" class="m-0">
-              <button class="btn btn-light px-1 my-0 mx-1 iconEdit" routerLink="/editar_educacion/{{curso.id}}">
+              <button class="btn btn-light px-1 mx-1 iconEdit" routerLink="/editar_educacion/{{curso.id}}">
                 <i  class="bi bi-pencil-square mx-1 my-0"></i>
               </button>
-              <button class="btn btn-danger px-1 my-0 mx-1 iconEdit" (click)="delete(curso.id)">
+              <button class="btn btn-danger px-1 mx-1 iconEdit" (click)="delete(curso.id)">
                 <i class="bi bi-trash3 mx-1 my-0"></i>  
               </button>
             </div>
           </div>
           <div class="col-md-5  text-center">{{curso.academy}}</div>
-          <div class="col-md-5"></div>
+
        
         </div>
 
