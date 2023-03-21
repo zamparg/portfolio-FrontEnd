@@ -17,13 +17,13 @@
     <a class="navbar-brand" href="https://github.com/zamparg">
       <i class="bi bi-github"></i>
     </a>
-    <a routerLink="profile" routerLinkActive="active" *ngIf="logIn">
+    <a routerLink="perfil" routerLinkActive="active" *ngIf="loginUser">
       <button class="btn btn-outline-light btn-login">Perfil</button>
     </a>
-    <a (click)="logout()" *ngIf="logIn">
+    <a (click)="logout()" *ngIf="loginUser||loginAdmin" routerLink="">
       <button class="btn btn-outline-light btn-login">Cerrar Sesion</button>
     </a>
-    <a routerLink="" routerLinkActive="active" *ngIf="!logIn" (click)="switchLoginModal()">
+    <a routerLink="" routerLinkActive="active" *ngIf="!loginUser && !loginAdmin" (click)="switchLoginModal()">
       <button class="btn btn-outline-light btn-login">Login</button>
     </a>
   </div>

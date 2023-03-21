@@ -6,14 +6,14 @@
       </div>
         
       <div class="row">
-        <div *ngFor="let proyecto of proyectos" class="col-md-4">
-          <div class="card">
-            <div class="card-body text-center">
+        <div *ngFor="let proyecto of proyectos" class="col-md-4  mb-3">
+          <div class="card ">
+            <div class="card-body text-center card-project">
               <img [src]="proyecto.img" class="avatar-card mx-auto d-block" alt="...">
-              <div class="text-center d-flex gap-3 justify-content-center">
+              <div class="text-center d-flex gap-2 justify-content-center align-items-center">
                 <h5 class="card-title">{{proyecto.tittle}}</h5>
                 <div *ngIf="isLogged" class="m-0">
-                  <button class="btn btn-light px-1 mx-1 iconEdit" routerLink="/editar_proyecto/{{proyecto.id}}">
+                  <button class="btn btn-dark border border-white px-1 mx-1 iconEdit" routerLink="/editar_proyecto/{{proyecto.id}}">
                     <i  class="bi bi-pencil-square "></i>
                   </button>
                   <button class="btn btn-danger px-1 mx-1 iconEdit" (click)="delete(proyecto.id)">
@@ -23,7 +23,7 @@
 
               </div>
               <p class="card-text">{{proyecto.description}}</p>
-              <a [href]="proyecto.link" class="btn btn-dark">Ver Proyecto</a>
+              <a [href]="proyecto.link" class="btn btn-dark border border-white">Ver Proyecto</a>
             </div>
             
           </div>

@@ -1,3 +1,7 @@
 .card-courses{
     background-color: rgba(255, 255, 255, 0.61);;
 }
+
+.card-courses:hover{
+    background-color: rgba(245, 245, 245, 0.9);;
+    }

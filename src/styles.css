@@ -55,10 +55,10 @@ h2{
 .card{
   background-color: rgba(245, 245, 245, 0.61);
 }
-.list-group-item:hover, .skills .card:hover, .card-courses:hover{
+.list-group-item:hover, .skills .card:hover{
   background-color: rgba(245, 245, 245, 0.9);;
-
   }
+
 .bi-plus-circle{
   color: white;
 }
@@ -68,4 +68,9 @@ h2{
 }
 
 ::selection{
-  background:rgb(21, 26, 46);}
+  background:rgb(21, 26, 46);
+  color: white}
+
+  textarea{
+    min-height: 3rem;
+  }

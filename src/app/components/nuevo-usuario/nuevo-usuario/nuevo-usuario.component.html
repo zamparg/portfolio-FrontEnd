@@ -1,0 +1,25 @@
+<section class="container-fluid ">
+    <h1 class="text-center mt-2 text-white">Nuevo Usuario</h1>
+      <div class="experience section m-1"> 
+        <div class="row ">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="formGroup">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                  <label for="nombreUsuario">Nombre de usuario:</label>
+                  <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" [(ngModel)]="email" required>
+                  <label for="password">Contraseña:</label>
+
+                    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+                    <button id="show_password" class="btn btn-dark border border-white p-1 mx-1" type="button" (click)="mostrarPassword()"> <span class="bi bi-eye-slash"></span> </button>
+
+  
+              </div>
+              <button class="btn btn-dark border border-white "> Agregar Usuario </button> 
+            </form>
+            
+        </div>  
+      </div>
+    </section>

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   hideLogin(){
     this.show =false
   }
-
+  mensajeError=false
   isLogged=false
   isLoginFail=false
   loginUsuario!: LoginUsuario
@@ -54,12 +54,13 @@ export class LoginComponent implements OnInit {
         this.tokenService.setAuthorities(data.authorities)
         this.roles= data.authorities
         this.switchLoginService.swithLogin()
+        this.mensajeError=false
         window.location.reload()
       }, err=>{
         this.isLogged=false
         this.isLoginFail=true
         this.errMsj=err.error.mensaje
-        console.log(this.errMsj)
+        this.mensajeError=true
       }
     )
   }

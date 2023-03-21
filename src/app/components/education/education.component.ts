@@ -18,8 +18,8 @@ export class EducationComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarEducacion()
-    console.log(this.tokenService.getAuthorities())
-    if(this.tokenService.getToken()){
+    
+    if(this.tokenService.getAuthorities().includes('ROLE_ADMIN')){
       this.isLogged=true
     }else{
       this.isLogged=false

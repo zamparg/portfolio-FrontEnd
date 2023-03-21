@@ -15,13 +15,13 @@ LoginComponent
 
 export class NavbarComponent implements OnInit {
   
-  logIn: boolean = false;
+  loginUser: boolean = false;
+  loginAdmin: boolean = false;
 
 
   constructor(private router:Router, private tokenService:TokenService, private authService: AuthService, public switchLoginService:SwitchLoginService) { }
   
-  switchLoginModal(){this.switchLoginService.swithLogin();
-    console.log(this.switchLoginService.loginState)}
+  switchLoginModal(){this.switchLoginService.swithLogin()}
   
   logout():void{
     this.authService.logout();
@@ -31,7 +31,15 @@ export class NavbarComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.logIn= this.tokenService.getToken()?true:false
+    if (this.tokenService.getToken()){
+      
+      this.loginAdmin = this.tokenService.getAuthorities().includes('ROLE_ADMIN');
+      this.loginUser= this.loginAdmin?false:true;
+
+    }else{
+      this.loginAdmin = false
+      this.loginUser= false
+    }
    }
 
 }

@@ -20,7 +20,7 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(): void {
     this.cargarExperiencia()
     
-    if(this.tokenService.getToken()){
+    if(this.tokenService.getAuthorities().includes('ROLE_ADMIN')){
       this.isLogged=true
     }else{
       this.isLogged=false

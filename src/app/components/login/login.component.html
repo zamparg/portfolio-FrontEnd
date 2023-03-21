@@ -12,8 +12,9 @@
             <input type="password" id="password" [(ngModel)]="password" name="password" required>
             <br>
         </div>
+        <div *ngIf="mensajeError"><small class="text-danger">Usuario o contraseña incorrectos</small></div>
         <!--<p class="small">¿Olvidaste la contraseña?</p>  -->
-        <button class="btn-dark btn m-2"type="submit"> Login</button>
+        <button class="btn-dark btn m-2 border border-white"type="submit"> Login</button>
         
         <!--
         <label for="email">Email:</label>
@@ -29,7 +30,7 @@
         <br>            
       -->
       </form>
-      <p class="small m-0">No tengo cuenta</p>
+      <a routerLink="nuevo-usuario" class="text-decoration-none text-white"><p class="small m-0 ">No tengo cuenta</p></a>
 
 </div>
 
