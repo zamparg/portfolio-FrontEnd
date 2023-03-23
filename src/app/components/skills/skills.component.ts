@@ -19,7 +19,7 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
     this.cargarSkills()
     
-    if(this.tokenService.getToken()){
+    if(this.tokenService.getAuthorities().includes('ROLE_ADMIN')){
       this.isLogged=true
     }else{
       this.isLogged=false

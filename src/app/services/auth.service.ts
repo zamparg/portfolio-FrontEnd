@@ -30,6 +30,5 @@ export class AuthService {
 
   public isLoggedIn() {
     return(localStorage.getItem('token')!== null)
-
   }
 }
