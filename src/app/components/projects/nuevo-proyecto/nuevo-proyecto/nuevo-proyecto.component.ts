@@ -23,7 +23,7 @@ export class NuevoProyectoComponent implements OnInit {
   onCreate():void{
     const exp = new Proyectos(this.tittle, this.img, this.link, this.description)
     this.proyectosService.save(exp).subscribe(data=>{
-      alert('Proyectos agregada con éxito');
+      alert('Proyecto agregado con éxito');
       this.router.navigate([''])
     }, err =>{
       alert('Error al crear la proyectos')
